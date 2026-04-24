@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  mvc-app:
+    build:
+      context: ./SchoolAppCoreMVC/SchoolAppCoreMVC
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
+    container_name: school-mvc-container
+
+  razor-app:
+    build:
+      context: ./Exercise1_RazorPages/SchoolAppCoreRazor/SchoolAppCoreRazor
+      dockerfile: Dockerfile
+    ports:
+      - "8082:80"
+    container_name: school-razor-container
